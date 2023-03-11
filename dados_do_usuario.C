@@ -78,25 +78,30 @@ void abertura() {
     printf(",'  '............   '.'   ............'  ',\n");
     printf(" '''''''''''''''''';''';''''''''''''''''''\n");
     printf("                    '''\n");
+    printf("._________________________________________.\n");
+    printf("|                                         |\n");
     printf("|        Ola, eu sou o bancoC.txt!        |\n");
-    printf("|      No que eu posso ser util hoje?     |\n\n");
-    printf("|       ESCOLHA UM DAS OPCOES ABAIXO:     |\n\n");
+    printf("|      No que eu posso ser util hoje?     |\n");
+    printf("|                                         |\n");
+    printf("|      ESCOLHA UMA DAS OPCOES ABAIXO:     |\n");
+    printf("|                                         |\n");
     printf("| 1. Adicionar Cliente ao Banco de Dados; |\n");
-    printf("|      2. Verificar o Banco de Dados;     |\n\n");
+    printf("|      2. Verificar o Banco de Dados;     |\n");
+    printf("|_________________________________________|\n");
         printf("\n\n");
 }
 
 void tchau() {
     printf("\n\n");
-printf("             .--.           .---.        .-.\n");
-printf("         .---|--|   .-.     | A |  .---. |~|    .--.\n");
-printf("      .--|===|Ch|---|_|--.__| S |--|:::| |~|-==-|==|---.\n");
-printf("      |OO|NT2|oc|===| |~~|OO| C |--|   |_|~|CATS|  |___|-.\n");
-printf("      |  |   |ah|===| |==|  | I |  |:::|=| |    |GB|---|=|\n");
-printf("      |  |   |ol|   |_|__|  | I |__|   | | |    |  |___| |\n");
-printf("      |~~|===|--|===|~|~~|OO|~~~|--|:::|=|~|----|==|---|=|\n");
-printf("hjw   ^--^---'--^---^-^--^--^---'--^---^-^-^-==-^--^---^-'\n\n");
-printf("                    OBRIGADO E VOLTE SEMPRE!!             \n\n");
+    printf("             .--.           .---.        .-.\n");
+    printf("         .---|--|   .-.     | A |  .---. |~|    .--.\n");
+    printf("      .--|===|Ch|---|_|--.__| S |--|:::| |~|-==-|==|---.\n");
+    printf("      |OO|NT2|oc|===| |~~|OO| C |--|   |_|~|CATS|  |___|-.\n");
+    printf("      |  |   |ah|===| |==|  | I |  |:::|=| |    |GB|---|=|\n");
+    printf("      |  |   |ol|   |_|__|  | I |__|   | | |    |  |___| |\n");
+    printf("      |~~|===|--|===|~|~~|OO|~~~|--|:::|=|~|----|==|---|=|\n");
+    printf("      ^--^---'--^---^-^--^--^---'--^---^-^-^-==-^--^---^-'\n\n");
+    printf("                   OBRIGADO E VOLTE SEMPRE!!             \n\n");
     printf("\n\n");
 }
 
@@ -107,7 +112,7 @@ int main()
     menu();
     printf("\n\n");
     tchau();
-    
+
     system("PAUSE");
     return(0);
 }
