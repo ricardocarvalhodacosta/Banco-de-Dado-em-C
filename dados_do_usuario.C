@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 
+// Menu da Base de Dados com opções de adicionar e leitura de dados;
 void menu() {
 
     int i;
@@ -9,7 +10,7 @@ void menu() {
 
     FILE *arquivo;
 
-        if (i==1)
+        if (i==1) //Adiiciona um cliente, armazenando o nome sobrenome, email e telefone em um arquivo txt;
         {
             char nome[50];
             char sobrenome[50];
@@ -18,7 +19,7 @@ void menu() {
 
             printf("Digite o primeiro nome do cliente: \n");
             scanf("%s", nome);
-            printf("Digite o sobrenome do cliente: \n");
+            printf("Digite o sobrenome do cliente (apenas um, nao utilize espaço): \n");
             scanf("%s", sobrenome);
             printf("\nDigite o email do cliente: \n");
             scanf("%s", email);
@@ -32,11 +33,11 @@ void menu() {
 
             if (arquivo == NULL)
             {
-                printf("Nao foi possivel abrir o arquivo!\n\n");
+                printf("Nao foi possivel abrir o arquivo!\n\n"); //Caso não seja possivel abrir o arquivo por algum erro, essa mensagem irá aparecer e encerar o programa;
                 system("PAUSE");
                 exit(1);
             } else {
-                printf("\n\nDados salvados com sucesso!\n\n");
+                printf("\n\nDados salvados com sucesso!\n\n"); //Caso contrário, o programa retorna que os dados foram salvos com exito;
             }
 
             fclose(arquivo);
@@ -48,16 +49,16 @@ void menu() {
             arquivo = fopen ("bancoC.txt", "r");
             if (arquivo == NULL)
             {
-                printf("Nao foi possivel abrir o arquivo!\n\n");
+                printf("Nao foi possivel abrir o arquivo!\n\n"); //Mensagem de erro;
                 system("PAUSE");
             } else {
-                printf("\n\nLendo os dados... Eles sao: \n\n");
+                printf("\n\nLendo os dados... Os dados coletados ate agora sao: \n\n"); //Mensagem de que o programa está lendo os dados já salvos;
             }
 
             do
             {
                 leitura = fgetc(arquivo);
-                printf("%c", leitura);
+                printf("%c", leitura); //Impreme na tela os dados dos clientes já coletados;
 
             } while (leitura != EOF);
 
@@ -66,7 +67,7 @@ void menu() {
     }
 
 }
-
+//Uma tela mais amigável com as opções propostas pelo programa;
 void abertura() {
     printf("\n\n");
     printf("         ,..........   ..........,\n");
@@ -90,7 +91,7 @@ void abertura() {
     printf("|_________________________________________|\n");
         printf("\n\n");
 }
-
+//Mensagem de encerramento do programa;
 void tchau() {
     printf("\n\n");
     printf("             .--.           .---.        .-.\n");
@@ -104,7 +105,7 @@ void tchau() {
     printf("                   OBRIGADO E VOLTE SEMPRE!!             \n\n");
     printf("\n\n");
 }
-
+//Funções do programa, abertura, menu e execução dos comandos do programa e encerramento;
 int main()
 {
 
